@@ -1,0 +1,93 @@
+############################### Cover ############################### > start
+
+cover:
+  height_scheme: full # full, half 
+  layout_scheme: search # blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)
+  display:
+    home: true
+    archive: false
+    others: false
+  search: Search...
+  features: 
+
+############################### Cover ############################### > end
+
+############################### Navigation Bar ############################### > start
+
+# 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
+navbar:
+  visiable: auto # always, auto
+  logo: # choose [img] or [icon + title]
+    img: 
+    icon:
+    title: Luxury
+  menu:
+    - name: 首页
+      icon: fa-solid fa-rss
+      url: /
+    - name: 分类
+      icon: fa-solid fa-folder-open
+      url: categories/
+      search: Search...   # Search bar placeholder
+
+custom_css:
+  navbar:
+    height: 64px
+    width: max # auto, max
+    effect: [shadow] # [shadow, floatable, blur]
+    
+############################### Navigation Bar ############################### > end
+
+############################### Sidebar ############################### > start
+sidebar:
+  position: right # left right 侧边栏的位置
+  
+  for_page: [blogger, category] # 主页、分类、归档等独立页面的组件
+  
+  for_post: [toc] # docs/post 这类文章页面
+  # 侧边栏组件库
+  widget_library:
+    blogger:
+      class: blogger
+      display: [desktop] # [desktop, mobile]
+      avatar: https://cdn.jsdelivr.net/gh/luxuxl/picx-images-hosting@master/20231218/avatar.webp
+      title:
+      subtitle:
+      jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
+      social: false
+  
+############################### Sidebar ############################### > end
+
+
+############################### Site Footer ############################### > start
+
+site_footer:
+  # layout of footer: [aplayer, social, license, info, copyright]
+  layout: [aplayer]
+  
+############################### Site Footer ############################### > end
+
+############################### Plugins ############################### > start
+
+plugins:
+  # APlayer is only available in mainland China.
+  aplayer:
+    enable: true
+    # Required
+    server: netease   # netease, tencent, kugou, xiami, baidu
+    type: playlist    # song, playlist, album, search, artist
+    id: 411796573    # song id / playlist id / album id / search keyword
+    # Optional
+    fixed: false      # enable fixed mode
+    theme: '#D23A32'  # main color
+    autoplay: false   # audio autoplay
+    order: list       # player play order, values: 'list', 'random'
+    loop: all         # player loop play, values: 'all', 'one', 'none'
+    volume: 0.5       # default volume, notice that player will remember user setting
+    list_max_height: 320px # list max height
+    list_folded: true
+    autoHide: true    # hide automaticaly
+  darkmode:
+    enable: true
+
+############################### Plugins ############################### > end
